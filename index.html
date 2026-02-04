@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projekt 1TP - CSS Overflow & Fullscreen</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth; 
+        }
+
+        .section {
+            width: 100vw;      
+            height: 100vh;      
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+
+        #home {
+            background-color: #2c3e50;
+            color: white;
+        }
+
+        #about {
+            background-color: #ecf0f1;
+            color: #2c3e50;
+        }
+
+        #contact {
+            background-color: #bfc212;
+            color: white;
+        }
+
+
+        .scroll-box {
+            width: 80%;
+            height: 200px;
+            border: 2px solid white;
+            border-radius: 10px;
+        
+            overflow-y: scroll;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        h1 { font-size: 3rem; margin-bottom: 10px; }
+        p { font-size: 1.2rem; line-height: 1.6; }
+
+        .scroll-box::-webkit-scrollbar {
+            width: 10px;
+        }
+        .scroll-box::-webkit-scrollbar-thumb {
+            background: #fff;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <section id="home" class="section">
+        <h1>Klasa 1TP</h1>
+        <p>Przewiń w dół, aby zobaczyć magię overflow!</p>
+    </section>
+
+    <section id="about" class="section">
+        <h2>Właściwość Overflow</h2>
+        <div class="scroll-box">
+            <p>Tutaj znajduje się bardzo długi tekst, który nie mieści się w małym okienku. Dzięki <strong>overflow-y: scroll</strong>, użytkownik może go przeczytać, nie psując układu całej strony. W programowaniu to bardzo ważne, aby kontrolować przestrzeń!</p>
+            <p>Właściwość overflow w CSS to potężne narzędzie, które pozwala programistom front-end kontrolować zachowanie elementów wewnątrz ograniczonej przestrzeni. Kiedy treść — czy to długi blok tekstu, czy duża grafika — przekracza wymiary swojego rodzica, stajemy przed wyborem: pozwolić jej swobodnie wypłynąć, uciąć ją bezlitośnie, czy zaoferować użytkownikowi intuicyjny pasek przewijania.</p>
+            <p>Koniec tekstu. Gratulacje za przewinięcie!</p>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h1>Koniec Projektu</h1>
+        <p>Nauczyliśmy się: 100vh, 100vw oraz overflow.</p>
+    </section>
+
+</body>
+</html>
